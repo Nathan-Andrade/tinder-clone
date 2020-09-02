@@ -7,11 +7,11 @@ import { Container, Image } from './styles';
 function Header() {
   return(
     <Container className="header">
-      <PersonIcon />
+      <PersonIcon className="header__icon" fontSize="large" />
       <Image className="header__logo">
         <img src="https://1000logos.net/wp-content/uploads/2018/07/tinder-logo.png" alt="tinder logo"/>
       </Image>
-      <ForumIcon />
+      <ForumIcon className="header__icon" fontSize="large" />
     </Container>
   ) ;
 }
