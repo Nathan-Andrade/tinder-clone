@@ -1,4 +1,4 @@
-#### Bibliotecas/Linguagens
+### Bibliotecas/Linguagens
 - Styled-Components
 - React-Router-Dom
 
