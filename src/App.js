@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/header';
 
@@ -10,6 +10,9 @@ function App() {
 
      <Router>
        <Switch>
+        <Route path="/chat">
+          <h1>Chat page</h1>
+        </Route>
         <Route path="/">
           <h1>Homepage</h1>
         </Route>
