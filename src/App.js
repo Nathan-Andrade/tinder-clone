@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/header';
+import TinderCards from './components/Cards/TinderCards';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <h1>Chat page</h1>
         </Route>
         <Route path="/">
-          <h1>Homepage</h1>
+          <TinderCards />
         </Route>
        </Switch>
         {/* Tinder Cards */}
