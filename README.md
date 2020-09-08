@@ -1,6 +1,8 @@
 ### Bibliotecas/Linguagens
 - Styled-Components
 - React-Router-Dom
+- React-tinder-cards
+- Firebase
 -------------------
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
