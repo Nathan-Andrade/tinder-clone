@@ -10,9 +10,16 @@ function TinderCards() {
   useEffect(() => {
     //isto vai ser para o código rodar
 
-    database.collection('people').onSnapshot(snapshot => {
+   const unsubscribe = database
+      .collection('people')
+      .onSnapshot(snapshot => {
       setPeople(snapshot.docs.map(doc => doc.data()))
-    })
+    });
+
+    return () => {
+      unsubscribe();
+    };
+
   }, [])
  // const people = [];
   //people.push = [];
@@ -21,7 +28,6 @@ function TinderCards() {
 
   return( 
     <Container>
-      <h1>Tinder Cards</h1>
       <CardContainer className="tinderCards_cardContainer">
         {people.map(person => (
           <TinderCard
