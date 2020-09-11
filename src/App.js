@@ -8,6 +8,7 @@ import Header from './components/Header/header';
 import TinderCards from './components/Cards/TinderCards';
 import SwipeButtons from './components/Buttons/SwipeButtons';
 import Chats from './components/Chats/Chats';
+import ChatScreen from './components/Chats/ChatScreen/index';
 
 function App() {
   return (
@@ -15,21 +16,26 @@ function App() {
 
      <Router>
        <Switch>
-        <Route path="/chat">
-          <Header backButton="/" />
-          <Chats />
-        </Route>
-        {/* Tinder Cards */}
-        <Route path="/">
-          <Header />
-          <TinderCards />
-          {/*  Buttons bellow tinder cards */}
-          <SwipeButtons />
-        </Route>
-       </Switch>
+         {/* Individual chat screen */}
+          <Route path="/chat/:person">
+            <Header backButton="/chat" />
+            <ChatScreen />
+          </Route>  
+          
+          {/* Chats screen */}
+          <Route path="/chat">
+            <Header backButton="/" />
+            <Chats />
+          </Route>
 
-        {/* Chats screen */}
-        {/* Individual chat screen */}
+          {/* Tinder Cards */}
+          <Route path="/">
+            <Header />
+            <TinderCards />
+            {/*  Buttons bellow tinder cards */}
+            <SwipeButtons />
+          </Route>
+       </Switch>
      </Router>
 
     </div>
