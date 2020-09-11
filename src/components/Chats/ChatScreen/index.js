@@ -4,7 +4,8 @@ import { Container } from './styles';
 import Avatar from '@material-ui/core/Avatar';
 
 function ChatScreen() {
-const [messages, setMessages] = useState([
+  const [input, setInput] = useState('');
+  const [messages, setMessages] = useState([
     {
       name: 'Letty Ortiz',
       image: 'https://vignette.wikia.nocookie.net/pedrofilms-inc/images/c/ca/Letty_Ortiz_.jpeg/revision/latest?cb=20200519170200&path-prefix=pt-br',
@@ -19,6 +20,14 @@ const [messages, setMessages] = useState([
       message: 'Hi how are you Letty?'
     },
   ]);
+
+  //Function to send messages
+  const handleSend = e => {
+    e.preventDefault();
+
+    setMessages([...messages, { message: input }]);
+    setInput("");
+  }
 
   return (
     <Container clasName="chatScreen">
@@ -42,11 +51,13 @@ const [messages, setMessages] = useState([
 
         <form className="chatScreen_input">
           <input
+            value={input}
+            onChange={e => setInput(e.target.value)}
             className="chatScreen_inputField"
             placeholder="Type a message..."
             type="text" 
           />
-          <button className="chatScreen_inputButton">SEND</button>
+          <button onClick={handleSend} type="submit" className="chatScreen_inputButton">SEND</button>
         </form>
 
     </Container>

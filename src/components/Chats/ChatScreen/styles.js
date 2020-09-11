@@ -31,7 +31,7 @@ export const Container = styled.header`
     border-radius: 20px;
   }
 
-  /* Input to type a message*/
+  /* Form Input to type a message*/
   .chatScreen_input{
     display: flex;
     padding: 5px;
@@ -39,5 +39,19 @@ export const Container = styled.header`
     bottom: 0;
     width: 100%;
     border-top: 1px solid lightgray;
+  }
+
+  .chatScreen_inputField{
+    flex: 1;
+    padding: 10px;
+    border: none;
+  }
+
+  .chatScreen_inputButton{
+    border: none;
+    margin-right: 20px;
+    background-color: white;
+    font-weight: bolder;
+    color: #fe3d71;
   }
 `;
