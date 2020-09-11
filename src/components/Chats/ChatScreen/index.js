@@ -28,6 +28,7 @@ function ChatScreen() {
     setMessages([...messages, { message: input }]);
     setInput("");
   }
+  //end function
 
   return (
     <Container clasName="chatScreen">
